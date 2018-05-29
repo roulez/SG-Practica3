@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <title>Midnight Robbery</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../libs/three.js"></script>
+    <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../libs/stats.js"></script>
+    <script type="text/javascript" src="../libs/dat.gui.js"></script>
+    <script type="text/javascript" src="../libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="../libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="../libs/MTLLoader.js"></script>
+    <script type="text/javascript" src="../libs/STLLoader.js"></script>
+    <script type="text/javascript" src="../libs/ThreeCSG.js"></script>
+    
+    <script type="text/javascript" src="Ground.js"></script>    
+    <script type="text/javascript" src="Casa.js"></script>    
+    <script type="text/javascript" src="TheScene.js"></script>    
+    <script type="text/javascript" src="script.js"></script>      
+    <script type="text/javascript" src="Character.js"></script>  
+    <script type="text/javascript" src="Character2.js"></script> 
+    <script type="text/javascript" src="Character3.js"></script> 
+    <script type="text/javascript" src="Character4.js"></script> 
+    <script type="text/javascript" src="Thief.js"></script>      
+    <script type="text/javascript" src="Puerta.js"></script>       
+    <script type="text/javascript" src="Armario.js"></script>     
+    <script type="text/javascript" src="Objetos.js"></script>    
+
+     
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+                background-image: url("imgs/images.jpeg");
+                background-repeat: no-repeat;
+                background-size: cover;
+        }
+          #main{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #main h1{
+                color: white;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+            #controles{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+            #fin{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+    <div id="menu" class="main">
+      <div id="main">
+        <h1>Midnight Robbery</h1>
+            <button onclick="start()">Jugar</button>
+            <button onclick="mostrarControles()">Controles</button>
+       </div>
+    </div>
+
+    <div id="controles">
+        <h1>Controles:</h1>
+        <p>Abajo: Avanzar</p>
+        <p>Arriba: Retroceder</p>
+        <p>Izquierda: Girar a la izquierda</p>
+        <p>A: Obtener vista desde arriba</p>
+        <p>V: Cambiar vista jugador</p>
+        <p>E: Robar objeto</p>
+        <button onclick="cerrarControles()">Atras</button>
+    </div>
+
+    <div id="fin">
+      <h2>Fin de la partida</h2>
+      <button onclick="restart()">Reiniciar</button>
+    </div>
+
+<!-- Div which will show statistical information -->
+<div id="Stats-output">
+</div>
+
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:100px; top:10px" id="Messages">
+</div>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+
+
+</body>
+</html>
