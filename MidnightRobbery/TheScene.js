@@ -170,7 +170,7 @@ class TheScene extends THREE.Scene {
     this.character1.scale.y = 0.5;
     this.character1.scale.z = 0.5;
     this.character1.Rota(90);
-    this.character1.Move(45, -65);
+    this.character1.Move(50, -65);
     model.add(this.character1);
 
     //Niño  
@@ -310,7 +310,7 @@ class TheScene extends THREE.Scene {
       }
 
       //Padre - character4
-      /*if(this.pasos4 < 120){
+      if(this.pasos4 < 120){
         if(this.loop4 == false)
           this.character4.Move(0,0.7);
         else
@@ -325,7 +325,7 @@ class TheScene extends THREE.Scene {
           this.loop4 = false;
         else
           this.loop4 = true;
-      }*/
+      }
     }
     else if(this.gameOver == true || this.ganador == true){
       if(this.ganador == true && this.gameOver == false)
